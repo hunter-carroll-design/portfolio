@@ -8,23 +8,92 @@
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/styles/style.css">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <title>Edit</title>
+  <title>my portfolio</title>
 </head>
 
 <body>
   <div id="nav-placeholder"></div>
-  
-  <div class="text-center justify-content-center align-content-center py-5 my-5">
+  <main class="container">
+    <div class="text-center justify-content-center align-content-center py-5 my-5">
 
-    <h1>Hi, I'm Hunter</h1>
-    <h2>Making experiences for the extraordinary.</h2>
-  </div>
+      <h1>Hi, I'm Hunter</h1>
+      <h2>Making experiences for the extraordinary.</h2>
+    </div>
+    <style>
+      #casestudy-thumbnails .thumbnail {
+        border: 2px black solid;
+        width: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        min-height: 155px;
+      }
+
+      .thumb-craigslist {
+        /* background:right url(/images/craigs-thumb.jpg); */
+      }
+    </style>
+    <div>
+      <div id="casestudy-thumbnails" class="row">
+        <div class="col-12 col-md-6 col-lg-4 ">
+          <div class="thumb-craigslist">
+            <div class="thumbnail p-2 m-1 bg-white">
+              <h3>Revamping Craigslist's Product Page:</h3>
+              <p>
+                Enhancing User Experience with Modern Design Elements
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="thumbnail p-2 m-1 bg-white">
+            <h3>Optimizing Mobile Navigation:</h3>
+            <p>
+              Boosting Usability for a Seamless User Experience
+            </p>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="thumbnail p-2 m-1 bg-white">
+            <h3>Designing an Effective Password Reset Email for a Café
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
+    <!-- save -->
+    <div class="mt-5 pt-5">
+      <div class="row mx-5">
+        <div class="col-md-5 col-lg-4 ">
+          <div class=" p-2 m-1 bg-primary">
+            <h3>Project Title</h3>
+            <p>Type (design/casestudy)</p>
+            <p>Description</p>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-4 ">
+          <div class=" p-2 m-1 bg-primary">
+            <h3>Project Title</h3>
+            <p>Type (design/casestudy)</p>
+            <p>Description</p>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-4 ">
+          <div class=" p-2 m-1 bg-primary">
+            <h3>Project Title</h3>
+            <p>Type (design/casestudy)</p>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+  </main>
 
   <div id="footer-placeholder">
 
@@ -34,13 +103,10 @@
 
 
   <script>
-    $(function () {
-      $("#nav-placeholder").load("assets/nav.html");
-
-    });
+    $("#head").load("/assets/head.html");
+    $("#nav-placeholder").load("/assets/nav.html");
+    $("#footer-placeholder").load("/assets/footer.html");
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
