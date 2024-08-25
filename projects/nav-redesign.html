@@ -14,64 +14,90 @@
 </head>
 
 <body>
+
+  <style>
+  .navbar-toggler-icon{
+    /* background-color: green!important; */
+    color: blue!important;
+  }
+  
+  
+  </style>
+  
   <div id="nav-placeholder"></div>
+
+  
   <main class="container">
     <div class="px-4 py-5 my-5">
 
-      <h1>Assignment: Redesign the mobile navigation so it is visibility appealing.</h1>
+      <h1>Optimizing Mobile Navigation:</h1>
+      <h2>Boosting Usability for a Seamless User Experience</h2>
+
 
     </div>
 
-    <section class="overview">
-      <h2>Overview</h2>
-      <p>2023</p>
-      <p>Assignment: Redesign the mobile navigation so it is visibility appealing.</p>
+    <section class="overview my-2">
+      <div>
+        <h2 class="">Overview</h2>
+        <p>2023</p>
+        <h3>Optimizing Mobile Navigation:</h3>
+        <p>Boosting Usability for a Seamless User Experience</p>
+      </div>
 
-      <div class="row">
+      <div class="row section">
         <div class="col-12 col-md-4 col-lg-4 ">
           <div class="overview-list">
-            <h3>Role:</h3>
-            <ul>
-              <li>UX/UI Design</li>
-              <li>Research</li>
-              <li>Front-end Development</li>
-            </ul>
+            <div><strong>Role:</strong>
+              <ul>
+                <li>UX/UI Design</li>
+                <li>UX Research</li>
+                <li>Front-end Development</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-4 col-lg-4 ">
           <div class="overview-list">
-            <h3>Time:</h3>
-            <p>2 weeks</p>
+            <div>
+              <strong>Time:</strong>
+              <ul>
+                <li>2 weeks</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-4 col-lg-4 ">
           <div class="overview-list">
-            <h3>Tools/Skills</h3>
-            <p>Figma, HTML, CSS, VS Code</p>
+              <div><strong>Tools/Skills:</strong>
+                <ul>
+                  <li>Figma</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>VS Code</li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <p>After reviewing the original design it was determined that users encountered challenges when navigating,
-        requiring extra thought and experiencing usability issues. These issues primarily stemmed from the hierarchical
-        organization of information and the difficulty in determining the relative importance assigned to pages
-        pertaining to the office/department and the current topic.</p>
+    <section class="main-content">
+      <h2>Problem</h2>
+      <p>Upon reviewing the university website’s original design, I quickly identified that users faced significant navigation challenges. The hierarchical organization of information was confusing, and it was difficult for users to determine the relative importance of pages related to various offices, departments, and/or current topics. This resulted in a disjointed user experience, requiring extra effort to find essential information.</p>
       <p>After determining these issues, three goals were set:</p>
       <ul>
-        
+
         <li>Make UI more intuitive</li>
         <li>Establish a clear hierarchy</li>
         <li>Design a visually appealing, brand-aligned navigation</li>
       </ul>
 
-      <div class="row goals justify-content-center">
+      <!-- <div class="row goals justify-content-center">
         <div class="col col-3 py-2">
           <div class="goal-num">1</div>
           <div>
             <img src="/images/brain-02-stroke-rounded 1.svg">
             <p>Make UI more intuitive</p>
-            
+
 
           </div>
         </div>
@@ -86,24 +112,76 @@
           <p>Design a visually appealing, brand-aligned navigation</p>
         </div>
 
-      </div>
-      <!-- Before -->
-      <p>Before</p>
-      <p>As you can see the navigation is not intuitive with no clear hierarchy and is visually unappealing.</p>
-      <p>Primary Limitation:</p>
-      <p>Since this section of the website is static I was asked to only redesign the navigation, without altering its
-        position.</p>
-      <p>As you can see the navigation is not intuitive with no clear hierarchy and is visually unappealing.</p>
-      <p>Primary Limitation:</p>
-      <p>Since this section of the website is static I was asked to only redesign the navigation, without altering its
-        position.</p>
-        <!-- During -->
-      <p>During</p>
+      </div> -->
 
-      <p>Step 1: Organized the types of links.</p>
-      <p>I categorized distinct link types to explore hierarchical options primarily determined by folder locations.
-        These links were divided into two types: those chosen by the department and all pages within that designated
-        folder.</p>
+
+      <!-- Before -->
+      <div class="row section">
+        <div class="col col-12 col-md-6">
+          <h4>The Original Design</h4>
+          <p>The original navigation was cluttered and lacked a clear hierarchy, making it difficult for users to navigate. It was also visually unappealing, detracting from the overall user experience.</p>
+          <p><strong>Primary Limitation:</strong></p>
+          <p>Since this section of the website is static I was asked to only redesign the navigation using CSS without altering its position or HTML.</p>
+        </div>
+        <div class="col col-12 col-md-6 side-image">
+          <img class="img-fluid" src="/images/projects/Nav-revamp/before-mockup.png">
+        </div>
+      </div>
+
+
+
+      <!-- During -->
+      <div class="row section">
+        <div class="col-12 sub-section">
+          
+          <h4>The Process</h4>
+          <p>Step 1: Organized the types of links.</p>
+          <p>The first step was to categorize the links to explore hierarchical options based on their folder locations. I divided the links into two categories: those selected by the department and all pages within the designated folder.</p>
+          <img class="img-fluid" src="/images/projects/Nav-revamp/nav-diagram.jpg">
+        </div>
+
+        <div class="row sub-section">
+          <div class="col col-6">
+
+            <h4>Step 2: Research and Inspiration</h4>
+            <p>To gather ideas, I researched navigation designs on other university websites. This provided valuable insights into effective hierarchical structures and aesthetic approaches.</p>
+            <h4>Step 3: Determined my limitations (CSS I could change)</h4>
+            <p>Given my primary limitation of only using CSS, I utilized Chrome DevTools to identify exactly what I could modify. This step was crucial in determining the feasible design changes within the constraints.</p>
+          </div>
+          <div class="col col-6 side-image">
+            <img class="img-fluid" src="/images/projects/Nav-revamp/after-mockup.jpg">
+          </div>
+          <div class="col-12 sub-section">
+            <h4>Step 4: Designing Variations</h4>
+            <p>With the constraints in mind, I created several design variations. I focused on adjusting the color scheme and balance to enhance visual appeal while maintaining functionality. The challenge was to make significant improvements within the static structure, emphasizing clarity and ease of use.</p>
+          </div>
+
+        </div>
+      </div>
+<!-- After -->
+<div class="row section">
+  <div class="col col-12 col-md-6">
+    <h4>The Outcome</h4>
+    <p>The redesigned navigation, while limited by the inability to change the HTML code, introduced several improvements:</p>
+    <ul>
+      <li><strong>Enhanced Hierarchy:</strong> A clear organization of links, making it easier for users to navigate through different sections.</li>
+      <li><strong>Improved Visual Appeal:</strong> A cleaner, more cohesive look that aligns with the university’s branding.</li>
+      <li><strong>Functional Adjustments:</strong> Although limited in scope, I proposed relocating the hamburger menu for better accessibility and adding an option to minimize internal pages of the office/folder.</li>
+
+    </ul>
+  </div>
+  <div class="col col-12 col-md-6 side-image">
+    <img class="img-fluid" src="/images/projects/Nav-revamp/after-mockup.jpg">
+  </div>
+</div>
+<!-- Conclusion -->
+<div class="row section">
+  <div class="col col-12">
+    <h4>Conclusion</h4>
+    <p>This project demonstrated how even within strict limitations, thoughtful design and strategic use of CSS can significantly enhance user experience. By focusing on clear organization, intuitive navigation, and visual appeal, I was able to transform the university website’s navigation into a <strong>more user-friendly and aesthetically pleasing</strong> component.</p>
+  </div>
+
+</div>
 
     </section>
 
@@ -117,9 +195,11 @@
 
 
   <script>
+    $(function () {
       $("#head").load("/assets/head.html");
       $("#nav-placeholder").load("/assets/nav.html");
       $("#footer-placeholder").load("/assets/footer.html");
+    });
   </script>
  
 </body>
