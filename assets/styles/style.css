@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  color:#000000;
   background-color: #f8f9fa;
   /* font-family: 'Inter', sans-serif; */
 font-family: "Lexend", sans-serif;
@@ -12,11 +13,11 @@ font-family: "Lexend", sans-serif;
   word-wrap: break-word;
 }
 .section{
-  border: 2px solid #212529 ;
+  /* border: 2px solid #212529 ; */
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 a {
   /* color: blue; */
@@ -25,9 +26,13 @@ a {
   height: 340px;
   object-fit: contain;
 }
+.section h4 {
+  border-bottom: 2px solid #000000;
+}
 
 
 .about-sections h3 {
+  padding-bottom: 2px;
   border-bottom: 2px #212529 solid;
 }
 
@@ -42,7 +47,7 @@ boom2 {
 }
 
 /* Overview section */
-.overview-list{
+/* .overview-list{
   padding-left: 5px;
   border-left: 3px solid #7097FA!important;
 }
@@ -51,7 +56,6 @@ boom2 {
   padding-left: 0;
 }
 .goals .col {
-  /* border: 1px solid #212529; */
   background-color: #F6F6F6;
   border-radius: 10px;
   margin: 1em;
@@ -66,8 +70,7 @@ boom2 {
  left: -10%;
  transform: translateX(-10%);
  transform: translateY(-50%);
-}
-
+} */
 
 
 
