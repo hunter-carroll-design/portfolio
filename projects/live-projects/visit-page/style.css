@@ -1,0 +1,243 @@
+#text-back button {
+	 border: 3px #ffcc00 solid;
+	 background-color: transparent;
+	 color: #ffcc00;
+	 font-weight: bold;
+}
+ #text-back button:hover {
+	 border: 3px #FFCC00 solid;
+	 background-color: #003399;
+	 color: #ffffff;
+}
+ .top-section {
+	 color: white;
+	 justify-content: center;
+}
+ .bottom-section {
+	 background-image: url(https://www.tamuk.edu/enrollment-management/_images_EM/visit/bottom-pattern.png);
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 color: white;
+	 justify-content: center;
+	 padding: 30px;
+}
+ .background-con {
+	 position: relative;
+	 text-align: center;
+	 color: white;
+}
+ .bottom-section .centered {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+}
+ .background-trans {
+	 background-color: rgba(234, 234, 234, 0.68);
+	 border-top: 5px #FFCC00 solid;
+	 border-bottom: 5px #FFCC00 solid;
+	 min-width: 10px;
+}
+ .main-content .carousel-indicators li {
+	 pointer-events: none;
+	 width: 7.5px;
+	 height: 7.5px;
+	 border-radius: 100%;
+}
+ #smallCarousel .carousel-item, #smallMobCarousel .carousel-item {
+	 transition-duration: 1.5s;
+}
+ @media only screen and (min-width: 768px) {
+	 .top-section .centered {
+		 position: absolute;
+		 top: 50%;
+		 left: 50%;
+		 transform: translate(-50%, -50%);
+	}
+	/* carousel */
+	 #smallCarousel .carousel-control-prev, #smallCarousel .carousel-control-next, #smallMobCarousel .carousel-control-prev, #smallMobCarousel .carousel-control-next {
+		 visibility: hidden;
+	}
+	 #smallCarousel:hover .carousel-control-prev, #smallCarousel:hover .carousel-control-next, #smallMobCarousel:hover .carousel-control-prev, #smallMobCarousel:hover .carousel-control-next {
+		 visibility: visible;
+	}
+	/* .TEXT-LEFT-SIDE */
+	 .background-trans {
+		 position: absolute;
+	}
+	 .text-left-side .background-trans.left {
+		 top: 50%;
+		 transform: translate(0, -50%);
+		 margin-left: 35px;
+		 height: 70%;
+		 max-width: 100%;
+		 padding: 20px;
+	}
+	 .text-left-side .text-width {
+		 padding-right: 25px;
+		 position: relative;
+	}
+	 .text-left-side .background-trans.right {
+		 top: 50%;
+		 transform: translate(0, -50%);
+		 height: 70%;
+		 max-width: 100%;
+	}
+	 .text-left-side .blank {
+		 padding-right: 30px;
+		 position: relative;
+	}
+	 #button-cont-resize.text-left-side .background-trans.left, #button-cont-resize.text-left-side .background-trans.right {
+		 height:80%!important;
+	}
+	/* .TEXT-RIGHT-SIDE */
+	 .text-right-side .background-trans.right {
+		 top: 50%;
+		 transform: translate(0, -50%);
+		 margin-right: 35px;
+		 height: 70%;
+		 max-width: 100%;
+		/* padding: 20px;
+		 */
+	}
+	 .text-right-side .text-width {
+		 padding-right: 25px;
+		 position: relative;
+	}
+	 .text-right-side .background-trans.left {
+		 top: 50%;
+		 right: 0%;
+		 transform: translate(0, -50%);
+		 height: 70%;
+		 max-width: 100%;
+	}
+	 .text-right-side .blank {
+		 padding-right: 30px;
+		 position: relative;
+	}
+	 .main-background {
+		 position: relative;
+	}
+}
+ @media only screen and (min-width: 1200px) {
+	/* .TEXT-LEFT-SIDE */
+	 .text-left-side .background-trans.left {
+		 height: 65%;
+	}
+	 .text-left-side .background-trans.right {
+		 height: 65%;
+	}
+	/* .TEXT-RIGHT-SIDE */
+	 .text-right-side .background-trans.right {
+		 height: 65%;
+	}
+	 .text-right-side .background-trans.left {
+		 height: 65%;
+	}
+	 #button-cont-resize.text-left-side .background-trans.left, #button-cont-resize.text-left-side .background-trans.right {
+		 height:70%!important;
+	}
+}
+ @media only screen and (max-width: 767px) {
+	 .top-section img {
+		 display: none;
+	}
+	 .background-wrap {
+		 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+	}
+	 .top-section {
+		 background-image: url(https://www.tamuk.edu/enrollment-management/_images_EM/visit/banner-visit.jpg);
+		 background-size: cover;
+		 background-repeat: no-repeat;
+		 background-position: center;
+		 color: white;
+		 justify-content: center;
+		 padding: 10px;
+	}
+	 .top-section {
+		 vertical-align: middle;
+		 margin: auto;
+		 color: white;
+		 justify-content: center;
+	}
+	 .top-text {
+		 padding: 20px;
+	}
+	 .content-wrap {
+		 background-image: url(https://www.tamuk.edu/enrollment-management/_images_EM/visit/text-background.jpg);
+		 background-size: cover;
+		 background-repeat: no-repeat;
+		 padding: 35px;
+	}
+}
+ .contact-info-container a{
+	 color:white!important;
+}
+ .contact-info-container a:hover{
+	 color:#ffcc00!important;
+}
+
+/*Modal*/
+#styled-modal .close {
+  color: #ffffff;
+}
+
+#styled-modal .modal-title {
+  color: #ffffff;
+}
+#styled-modal .modal {
+    padding-right:0px;
+}
+
+#styled-modal #mid-modal {
+  /*position: fixed;*/
+  /*right: 0;*/
+  /*z-index: 9;*/
+  /*bottom:10px;*/
+  /*right:10px;*/
+  /* height: 72px; */
+  position: fixed !important;
+            display: flex;
+            align-items: center;
+            z-index: 9;
+            height: unset !important;
+            bottom: 50%;
+            right: -45px;
+            padding: 14px !important;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-top: 1px solid;
+            border-color: #00337042;
+            line-height: unset !important;
+            border-bottom: none !important;
+            transform: rotate(-90deg);
+            text-transform: uppercase!important;
+            font-weight:600!important;
+}
+@media screen and (max-width:576px){
+    #styled-modal #mid-modal {
+        transform: rotate(0deg);
+        bottom:0;
+        right:0;
+        margin:0!important;
+        width:100%;
+        justify-content:center
+    }
+}
+/*
+#styled-modal button#mid-modal  {
+  color: #FFF;
+  background-color: #003399;
+  border-radius:0;
+}
+*/
+
+#styled-modal .clive-submit {
+  color: #FFF !important;
+  background-color: #003399 !important;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+}
+ 
