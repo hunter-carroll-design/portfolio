@@ -1,0 +1,122 @@
+.side-nav-wrapper {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    color: white;
+    border-bottom:1px solid #ffffff33;
+    border-top:1px solid #ffffff33;
+   /* background-color: #005daa;
+    */
+    /* background-color: #003399; */
+    background-color: var(--very-dark-blue);
+   /* background-color: var(--centennial-gold);
+    */
+   /* background-color: white;
+    */
+}
+.side-nav {
+    padding: 10px;
+    top: 0;
+    left: 5vw;
+}
+.side-nav ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+.side-nav ul:before {
+    content: ' Decades: ';
+    font-weight: bold;
+   /* color: white;
+    */
+    padding-left: 5px;
+}
+.side-nav li {
+    padding: 10px;
+    display: inline-block 
+}
+.side-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 18px;
+}
+.side-nav a:hover, .side-nav a.active {
+   /* color: #0056b3;
+    */
+    color: #ffcc00;
+    text-decoration: underline;
+}
+.dropdown-btn {
+    display: none;
+    color:white 
+}
+@media screen and (max-width: 768px) {
+    .side-nav-wrapper {
+        width: 100%;
+        
+       /* background-color: #e2dfdf;
+        */
+   }
+    .side-nav {
+        transform: rotate(0deg);
+        width: 100%;
+   }
+    .side-nav ul {
+        display: none;
+        list-style-type: none;
+        background-color: #003399;
+        /* border-top: 1px solid #ffffff55; */
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top:10px;
+   }
+    .side-nav ul:before {
+        content: unset 
+   }
+    .side-nav li {
+        padding: 10px;
+        display: inline-block;
+   }
+    .side-nav a {
+       /* color: white;
+        */
+        text-decoration: none;
+        font-size: 18px;
+   }
+    .side-nav ul.show {
+        display: block;
+   }
+    .dropdown-btn {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        padding: .5rem 0;
+        font-weight:bold;
+       /* text-transform: uppercase;
+        */
+        background-color: unset;
+   }
+    .caret {
+        transition: transform 0.3s ease;
+        display: inline-block;
+        margin-right: 5px;
+   }
+    .caret.open {
+        transform: rotate(180deg);
+   }
+    .show {
+        display: block !important;
+       /* Ensure Bootstrap dropdown is shown */
+   }
+
+   
+}
