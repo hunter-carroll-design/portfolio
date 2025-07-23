@@ -1,0 +1,128 @@
+/* ------ The Mixin ------ */
+/* ------ The Set Up ------ */
+ @media (max-width: 299px) {
+	 .main-content h2 {
+		 line-height: 38.832px;
+	}
+	 .main-content h3 {
+		 line-height: 19.416px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 0.75em;
+		 line-height: 19.416px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 0.75em;
+	}
+}
+ @media (min-width: 300px) {
+	 .main-content h2 {
+		 line-height: 45.304px;
+	}
+	 .main-content h3 {
+		 line-height: 22.652px;
+	}
+	 .main-content h4, .main-content .h4, .main-content .h4, .button-container {
+		 font-size: 0.875em;
+		 line-height: 22.652px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 0.875em;
+	}
+	 .text-right-side .background-trans.right, .text-left-side .background-trans.left {
+		 padding: 5px;
+	}
+}
+ @media (min-width: 600px) {
+	 .main-content h1 {
+		 font-size: 2rem;
+	}
+	 .main-content h2 {
+		 line-height: 38.832px;
+	}
+	 .main-content h3 {
+		 line-height: 19.416px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 0.75em;
+		 line-height: 19.416px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 0.75em;
+	}
+}
+ @media (min-width: 800px) {
+	 .main-content h2 {
+		 line-height: 45.304px;
+	}
+	 .main-content h3 {
+		 line-height: 22.652px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 0.875em;
+		 line-height: 22.652px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 /*font-size: 0.875em;*/
+	}
+}
+ @media (min-width: 992px) {
+	 .main-content h1 {
+		 font-size: 3rem;
+		 
+	}
+	 .main-content h2 {
+		 line-height: 51.776px;
+	}
+	 .main-content h3 {
+		 line-height: 25.888px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 1em;
+		 line-height: 25.888px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 1em;
+	}
+	 .text-right-side .background-trans.right, .text-left-side .background-trans.left {
+		 padding: 20px;
+		 padding-left: 20px;
+	}
+}
+ @media (min-width: 1200px) {
+	 
+	 .main-content h2 {
+		 line-height: 58.248px;
+	}
+	 .main-content h3 {
+		 line-height: 29.124px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 1.125em;
+		 line-height: 29.124px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 1.125em;
+	}
+}
+ @media (min-width: 1300px) {
+	 .main-content h1 {
+		 font-size: 4rem;
+		 
+	}
+	 .main-content h2 {
+		 line-height: 58.248px;
+	}
+	 .main-content h3 {
+		 line-height: 29.124px;
+	}
+	 .main-content h4, .main-content .h4, .button-container {
+		 font-size: 1.125em;
+		 line-height: 29.124px;
+	}
+	 .main-content p, .main-content ul, .main-content ol, .main-content pre, .main-content table, .main-content blockquote {
+		 font-size: 1.125em;
+	}
+}
+/* ------ Demo styles ------ */
+/*# sourceMappingURL=responsive-text.css.map */
