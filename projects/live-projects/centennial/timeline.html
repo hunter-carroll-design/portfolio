@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="/renderfile/ffed1627ac1e00932d15ed5d6cd01685/_images_sitewide/decorative/favicon.ico" rel="icon" />
+  <title>
+    Historical Timeline | Texas A&amp;M University Kingsville
+  </title>
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="assets/timeline.css" rel="stylesheet" />
+  <link href="timeline-nav.css" rel="stylesheet" />
+
+
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MTK44QM');</script>
+
+</head>
+
+<body>
+  <noscript>
+    <iframe aria-hidden="true" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MTK44QM"
+      style="display:none;visibility:hidden" title="Google Tag Manager noscript iframe" width="0"></iframe>
+  </noscript>
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <style>
+    #main-nav-container .centennial-logo {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #main-nav-container .tamuk-logo {
+      /* width: 50px; */
+      width: auto;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #main-nav-container {
+      position: relative;
+      width: 100%;
+      background-color: #003399;
+      border-bottom: 1px solid #ffffff55;
+      z-index: 1
+    }
+
+    #main-nav-container nav {
+      max-width: 1790px;
+      margin: 0 auto;
+    }
+
+    #main-nav-container nav .navbar-brand {
+      /* font-weight: 200; */
+      color: white;
+    }
+
+    #main-nav-container nav .navbar-brand:hover {
+      color: #f4bf4f
+    }
+
+    #main-nav-container .nav-link {
+      color: white
+    }
+
+    #main-nav-container .nav-link:hover,
+    #main-nav-container .active {
+      color: #f4bf4f;
+      text-decoration: underline;
+    }
+  </style>
+  <div id="main-nav-container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- <a class="nav-text navbar-brand" href="https://www.tamuk.edu/centennial" title="Return to Centennial Homepage">
+                <img alt="" class="centennial-logo" src="https://www.tamuk.edu/centennial/_images/Centennial-logo.svg"/>
+                <span>A 100-Year Legacy</span>
+            </a> -->
+      <a class="nav-text navbar-brand" href="https://www.tamuk.edu" title="Return to TAMUK Homepage">
+        <img alt="" class="tamuk-logo" src="https://www.tamuk.edu/_images_sitewide/web_header1.png" />
+      </a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler collapsed" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.javelinagiving.org/give-online">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.bkstr.com/texasamkingsvillestore/home">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-link="cal-buttonCon" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="past-presidents.html">Past Presidents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timeline.html">Historical Timeline</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const currentUrl = window.location.href.split("/").pop(); // Get the last part of the current URL
+
+      navLinks.forEach(link => {
+        const linkUrl = link.getAttribute("href").split("/").pop(); // Get the last part of the link URL
+
+        if (currentUrl === linkUrl) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page"); // Accessibility feature
+          link.style.pointerEvents = "none"; // Disable clicking on the active link
+
+          // Check if (current) span already exists; if not, add it
+          if (!link.querySelector(".sr-only")) {
+            const currentSpan = document.createElement("span");
+            currentSpan.classList.add("sr-only");
+            currentSpan.textContent = "(current)";
+            link.appendChild(currentSpan);
+          }
+        } else {
+          link.classList.remove("active");
+          link.removeAttribute("aria-current"); // Remove ARIA label
+          link.style.pointerEvents = "auto"; // Re-enable clicking on non-active links
+
+          // Remove (current) span if it exists
+          const currentSpan = link.querySelector(".sr-only");
+          if (currentSpan) {
+            currentSpan.remove();
+          }
+        }
+      });
+
+      const homepageAnchorLinks = document.querySelectorAll('a[data-link]');
+      const isHomePage = window.location.pathname.includes("index.html") || window.location.pathname === "/";
+
+      homepageAnchorLinks.forEach(link => {
+        const section = link.getAttribute("data-link");
+
+        if (isHomePage) {
+          link.href = `#${section}`;
+        } else {
+          link.href = `https://www.tamuk.edu/centennial/index.html#${section}`;
+        }
+      });
+
+    });
+
+
+  </script>
+
+
+  <main>
+    <div class="page-wrapper">
+      <div class="section-timeline-heading">
+        <div class="section-timeline-heading-overlay"></div>
+        <div class="container">
+          <div class="timeline-main_heading-wrapper">
+            <h1>Historical Timeline</h1>
+          </div>
+        </div>
+      </div>
+      <button class="back-to-top btn btn-primary" id="backToTop" onclick="scrollToTop()"> <span
+          class="arrow">&#8593;</span> <span class="text">Back to Top</span> </button>
+      <div class="side-nav-wrapper">
+        <nav class="side-nav"><button class="dropdown-btn" onclick="toggleDropdown()"><span class="caret"
+              id="caret">&#9660;</span> Decades</button> <!-- Dropdown button -->
+          <ul id="nav-links">
+            <li><a href="#1910s">1910s</a></li>
+            <li><a href="#1920s">1920s</a></li>
+            <li><a href="#1930s">1930s</a></li>
+            <li><a href="#1940s">1940s</a></li>
+            <li><a href="#1950s">1950s</a></li>
+            <li><a href="#1960s">1960s</a></li>
+            <li><a href="#1970s">1970s</a></li>
+            <li><a href="#1980s">1980s</a></li>
+            <li><a href="#1990s">1990s</a></li>
+            <li><a href="#2000s">2000s</a></li>
+            <li><a href="#2010s">2010s</a></li>
+            <li><a href="#2020s">2020s</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lightbox" id="lightbox"><span class="lightbox-close">&#215;</span>
+        <figure><img class="lightbox-content" id="lightbox-img" />
+          <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+      </div>
+      <div class="section-timeline">
+        <div class="section-timeline-overlay"></div>
+        <div class="container">
+          <div class="timeline_component">
+            <div class="timeline_progress">
+              <div class="timeline_progress-bar"></div>
+            </div>
+            <section class="timeline_item" id="1910s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1910s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1917</p>
+                    <p><span class="month">February 24</span> - Texas House approves Bill No 72, establishing the
+                      creation of a Normal School (teacher training institution) in South Texas.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Model T Ford with banner that reads &quot;Kingsville Wants The Normal!&quot;"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/normal.jpg" />
+                      <p class="image-caption">Model T Ford with banner that reads "Kingsville Wants The Normal!"</p>
+                    </div>
+                    <p><span class="month">July 14</span> - Kingsville is selected as the home for the newly approved
+                      South Texas State Normal College (STSNC)</p>
+                    <p><span class="month">August 24</span> - Title to the campus approved and deed granted to the
+                      campus.</p>
+                    <p><span class="month">September 28</span> - Appropriation for the STSNC is repealed due to the
+                      start of WWI.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1920s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1920s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1923</p>
+                      <p><span class="month">March</span> - Senate Bill 176 changed the name of the Kingsville campus to
+                        South Texas State Teachers College (STSTC) and appropriated funds for a President&#8217;s home,
+                        building, and equipment for the Kingsville campus.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1924</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Robert Cousins in the presidents office"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/robert-cousins.jpg" />
+                        <p class="image-caption">Robert Cousins in the presidents office</p>
+                      </div>
+                      <p><span class="month">June 1</span> - Robert Cousins begins his term as President and initiates
+                        construction of the first building on campus.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Robert J. Kleberg turning the first shovel at the groundbreaking ceremony"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/groundbreaking.jpg" />
+                        <p class="image-caption">Robert J. Kleberg turning the first shovel at the groundbreaking
+                          ceremony</p>
+                      </div>
+                      <p><span class="month">September 15</span> - Hundreds of citizens from the community attend the
+                        groundbreaking for STSTC. Robert J. Kleberg turned the first shovel of earth for the new school.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1925</p>
+                      <p><span class="month">March 21</span> - Official laying of the cornerstone at the Main Building,
+                        now Manning Hall, was attended by an estimated 10,000 Texans.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Students attending the first session located in Manning Hall"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/first-class.jpg" />
+                        <p class="image-caption">Students attending the first session located in Manning Hall</p>
+                      </div>
+                      <p><span class="month">June 8</span> - STSTC opens for first session with 276 students. Campus
+                        organization included colleges of Liberal Arts, Education, Industries and Commerce, and Military
+                        Science.</p>
+                      <p><span class="month">June 22</span> - Students formed the Robert J. Kleberg History Club.</p>
+                      <p><span class="month">June 25</span> - Students formed the Dora K. Cousins English Club.</p>
+                      <p><span class="month">Fall</span> - The Elena Mar Spanish Club, the Nature Club, and the
+                        Classical Club were chartered.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Group photo of faculty and staff outside of Manning Hall"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/first-faculty.jpg" />
+                        <p class="image-caption">Group photo of faculty and staff outside of Manning Hall</p>
+                      </div>
+                      <p>Faculty gathered for the first Faculty Meeting in Main Building.</p>
+                      <p><span class="month">September</span> - Students selected the following as official symbols for
+                        the University:</p>
+                      <ul>
+                        <li>Mascot - The Javelina won out over the badger, coyote, and jack-rabbit.</li>
+                        <li>Colors - Blue &amp; Gold was selected over Brown &amp; Gold.</li>
+                        <li>Flower - Bluebonnet was chosen over the sunflower.</li>
+                      </ul>
+                      <p><span class="month">November 18</span> - The first issue of the award-winning student newspaper
+                        The South Texan was published.</p>
+                      <p><span class="month">December</span> - The University awarded letters to 15 football players.
+                        The team played seven games, winning four, and taking on junior colleges, high schools, and the
+                        Kingsville firemen.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1926</p>
+                      <p><span class="month">February 3</span> - All Kingsville schools would be used as labs for
+                        teaching (experiential learning in the community).</p>
+                      <p><span class="month">April</span> - English Club sponsored the first student drama presentation,
+                        &#8220;Come Out of the Kitchen.&#8221;</p>
+                      <p><span class="month">April</span> - The first South Texas Music Contest was sponsored by the
+                        music department.</p>
+                      <p><span class="month">December 21</span> - Groundbreaking on the Gym, now known as the Health and
+                        Kinesiology Building.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1929</p>
+                      <p>Delta Theta sorority founded.</p>
+                      <p><span class="month">June</span> - Senate Bill 293 becomes law, expanding the University&#8217;s
+                        mission and changing its name.</p>
+                      <p><span class="month">July 11</span> - Lantana becomes the official university flower.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Ema Steward and Porter Garner graduation photo"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/porter-and-ema.jpg" />
+                        <p class="image-caption">Ema Steward and Porter Garner graduation photo</p>
+                      </div>
+                      <p><span class="month caption">July</span> - Ema Steward and Porter Garner&#8212;the first and
+                        second students to register in 1925&#8212;receive their bachelor&#8217;s degrees.</p>
+                      <p><span class="month">August 10</span> - Adelina Pena de Garcia graduates, becoming the first
+                        Mexican American to graduate from the college with a bachelor&#8217;s degree.</p>
+                      <p><span class="month">September 22</span> - President Cousins is attacked by one of two javelinas
+                        that had served as the school&#8217;s mascot since 1926. After receiving 21 rabies shots,
+                        Cousins declined students' offer to change mascots, admiring the javelina's fighting spirit.</p>
+                      <p><span class="month">September 23</span> - The school opens as Texas College of Arts and
+                        Industries.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="A.Y. &#8220;Bud&#8221; McCallum"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/ay-mccallum.jpg" />
+                        <p class="image-caption">A.Y. &#8220;Bud&#8221; McCallum</p>
+                      </div>
+                      <p><span class="month">October</span> - A.Y. &#8220;Bud&#8221; McCallum became athletic director
+                        and applied for membership in the Texas Intercollegiate Athletic Association (TIAA).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1930s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1930s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1931</p>
+                    <p>First Agriculture degree is conferred.</p>
+                    <p>&#8220;T-Association&#8221; hosts the first homecoming celebration, starting a new tradition
+                      including a homecoming bonfire.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="T.I.A.A. Champions football team photo"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/tiaa-team-picture.jpg" />
+                      <p class="image-caption">T.I.A.A. Champions football team photo</p>
+                    </div>
+                    <p>Javelinas were 1931-1932 TIAA conference champions.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1932</p>
+                    <p><span class="month">March 3</span> - President Cousins dies of complications from influenza.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1934</p>
+                    <p>President Seale applies to the Public Works Administration for funds to construct two dorms and a
+                      cafeteria as part of a New Deal project. The resulting funding allowed for the construction of
+                      Cousins, Seale, and Loftin Halls.</p>
+                    <p><span class="month">June 6</span> - Seale dies of a cerebral hemorrhage at the age of 47.</p>
+                    <p><span class="month">October 26</span> - Javelinas win their first Lone Star Conference game
+                      (conditionally accepted) during the team&#8217;s first night game.</p>
+                    <p>Everardo &#8220;Balo&#8221; Lerma becomes the first Mexican-American on the A&amp;I football
+                      team.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Engineering class of 1934"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/engineering-class.jpg" />
+                      <p class="image-caption">Engineering class of 1934</p>
+                    </div>
+                    <p>Engineering program expands, providing students the opportunity to complete a degree in general
+                      engineering.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1935</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Landscape photo of Cousins, Seale and Loftin Hall"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/cousins-seale-loftin-hall.jpg" />
+                      <p class="image-caption">Landscape photo of Cousins, Seale and Loftin Hall</p>
+                    </div>
+                    <p><span class="month">February 23</span> - Construction started on Seale and Cousins Hall.</p>
+                    <p>College Board of Directors authorizes a course in natural gas engineering.</p>
+                    <p>Javelinas joined the Alamo conference and were independent from 1933-1935.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1936</p>
+                    <p>Student government starts a building fund for a union building.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1940s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1940s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p>Approximately 1,100 students are enrolled.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1941</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="East Campus during World War II"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/war-time-preparation.jpg" />
+                      <p class="image-caption">East Campus during World War II</p>
+                    </div>
+                    <p>The institution transitions to a wartime curriculum. Faculty aided in teaching national defense
+                      courses on campus and at relocation centers.</p>
+                    <p>Students took credit and non-credit courses about national defense.</p>
+                    <p>Many students and faculty entered military service.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1942</p>
+                    <p><span class="month">June 12</span> - Dr. E.N. Jones became the 4th president of the Texas College
+                      of Arts and Industries.</p>
+                    <p><span class="month">December 12</span> - The college held a naming ceremony for Jones Auditorium
+                      and officially laid the auditorium&#8217;s cornerstone.</p>
+                    <p>Nierman Hall was also officially named on this day in honor of Chemistry Professor Dr. John L.
+                      Nierman. He was the first faculty member to hold a Ph.D. He served as Director of the Graduate
+                      Division and acting president when needed.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1944</p>
+                    <p><span class="month">May</span> - Central Power and Light Company donated equipment for complete
+                      electrical engineering labs in alternating and direct currents&#8212;the first installation like
+                      this in South Texas designed for educational purposes.</p>
+                    <p>A Master Plan submitted called for eight to ten new buildings including the SUB.</p>
+                    <p>Chemistry was the largest department.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1945</p>
+                    <p><span class="month">January</span> - Initiated a new program in citriculture.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1946</p>
+                    <p><span class="month">April</span> - A $5000 Federal Works Agency loan, $150,000 in local bonds,
+                      and $71,000 in community funds expanded the physical plant and funded the construction of three
+                      dorms, a student union building, and an administration-library building.</p>
+                    <p><span class="month">July 23</span> - The County Commissioners&#8217; Court unanimously approved a
+                      motion that Kingsville and Kleberg County could lease NAAS-Kingsville for $1.00 a year plus
+                      maintenance costs and then sublease it to the university.</p>
+                    <p><span class="month">August 1</span> - NAAS decommissioned and placed under caretaker status
+                      (announced in Sept 1945). The property eventually becomes A&amp;I East Campus and provided housing
+                      and dining space for students.</p>
+                    <p>James C. Jernigan arrives at TAMUK as director of men&#8217;s services. Then progressed to
+                      director of student life, director of student personnel services, and dean of the college.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1946-47</p>
+                    <p>Student enrollment soared to 2061, with 1173 veterans.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1947</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Faculty pose in front of the Citrus Center sign"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/Citrus-Center-Faculty.jpg" />
+                      <p class="image-caption">Faculty pose in front of the Citrus Center sign</p>
+                    </div>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Dr. P.W. Rohrbaugh holding grapefruit produced at the Citrus Center"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/dr-rohrbaugh.jpg" />
+                      <p class="image-caption">Dr. P.W. Rohrbaugh holding grapefruit produced at the Citrus Center</p>
+                    </div>
+                    <p>Dr. J. B. Corns worked with Weslaco and the Weslaco Chamber of Commerce to locate the 80 acres of
+                      land where the Citrus Center ended up. In October, the Fund Drive Committee pledged $31000 and
+                      continued to gather donations to fund the center.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Citrus Center original plots of land"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/Citrus-Center.jpg" />
+                      <p class="image-caption">Citrus Center original plots of land</p>
+                    </div>
+                    <p><span class="month">Fall</span> - The Citrus Center opened with a new director, Dr. P.W.
+                      Rohrbaugh. He established a program that enrolled 700 students over ten years in courses such as
+                      citriculture, vegetable growing, and allied subjects. There were five experimental plots in citrus
+                      on the original tract, and three others were added later (Bayview, Monte Alto, and Edinburg).</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Student roping cow at rodeo"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/rodeo.jpg" />
+                      <p class="image-caption">Student roping cow at rodeo</p>
+                    </div>
+                    <p>Aggie Club-sponsored rodeos were held.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1948</p>
+                    <p><span class="month">August 31</span> - Jones submitted his resignation as president of TCAI to
+                      become Vice President in charge of Academic Administration at Texas Technological College in
+                      Lubbock (Texas Tech). Poteet was immediately named as acting president, and a month later was
+                      named the new president.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1949</p>
+                    <p><span class="month">August</span> - After almost 13 years of working toward the creation of a
+                      Student Union Building and through support from the Kingsville Chamber of Commerce,
+                      Ex-Students&#8217; Association and Student Council, Howard E. Butt and Lon C. Hill (both on the
+                      Board of Directors) and faculty, staff and students, construction starts.</p>
+                    <p><span class="month">September</span> - Baugh Hall (women&#8217;s dorm &#8211; 163 women) and May
+                      Hall (men&#8217;s dorm &#8211; 165 men) opened.</p>
+                    <p><span class="month">September 15</span> - Construction begins on a new $275,000 stadium with a
+                      seating capacity of 72,000.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1949-1950</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Dr. Frank H. Dotterweich"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/dr-frank-h-dotterweich.jpg" />
+                      <p class="image-caption">Dr. Frank H. Dotterweich</p>
+                    </div>
+                    <p>Dr. Frank H. Dotterweich&#8217;s gas engineering program is accredited and one of the only such
+                      programs in the South; Penn State had the only other such program in the nation.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1950s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1950s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1950&#8217;s</p>
+                    <p>A dairy barn, feed lot sheds, fertilizer storage area, farm office, farm manager house, a barn, a
+                      hay storage area, a poultry house, a hog barn, and a livestock pavilion were added to support the
+                      institution&#8217;s growing agricultural programs.</p>
+                    <p>The Forum, an open-air auditorium behind the old admin building, was walled in to create a home
+                      for the John E Conner Museum.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1950</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Memorial Student Union Building"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/msub.jpg" />
+                      <p class="image-caption">Memorial Student Union Building</p>
+                    </div>
+                    <p><span class="month">November 6</span> - The $470K Student Union Building opens during Homecoming
+                      festivities and becomes the center of campus social life.</p>
+                    <p>SUB opens for student use and becomes the center of social life on campus. It includes a
+                      bookstore, foyer, post office, main lobby, lounge, reading room, game room, offices on the first
+                      floor. A ballroom occupied the second and third floor. A private dining room and conference room
+                      is on the upper floor. There was also a small radio broadcast station.</p>
+                    <p><span class="month">December</span> - The Alfred L. Kleberg Engineering Hall was constructed.</p>
+                    <p>Operations at East Campus continued to slowly decline. In the Fall, the Navy requested A&amp;I
+                      evacuate the station by Summer 1951.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1950-1951</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img alt="Colleg Hall"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/college-hall.jpg" />
+                      <p class="image-caption">College Hall</p>
+                    </div>
+                    <p>College Hall Construction is complete.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1951</p>
+                    <p><span class="month">January</span> - Korean War hits campus; 130 Texas A&amp;I men volunteered or
+                      drafted for service.</p>
+                    <p><span class="month">February</span> - Formal dedication of College Hall is held.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="A&amp;I College Farm entrance"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/college-farm.jpg" />
+                      <p class="image-caption">A&amp;I College Farm entrance</p>
+                    </div>
+                    <p>Richard M Kleberg, representing King Ranch, presented the college with a gift of 500 acres
+                      joining the main campus for the college farm.</p>
+                    <p><span class="month">March</span> - Board of Directors allocated funds for an academic building at
+                      the space provided by Kleberg.</p>
+                    <p><span class="month">April 1</span> - Naval Air Station Kingsville was reactivated; A&amp;I
+                      continued its use until June 1.</p>
+                    <p><span class="month">April 15</span> - The Texas A&amp;I Detachment of the 4305 ASU, Texas ROTC
+                      Instructor group was activated under the provisions of General Orders No 62, Headquarters Fourth
+                      Army, 1951. This detachment was to establish a Signal Corps ROTC unit - the first senior division
+                      unit in the South Texas army.</p>
+                    <p><span class="month">May</span> - The Cadet Corp was organized into the Battalion Staff, four
+                      cadet companies, and a band. The King&#8217;s Rifles (top drill cadets who performed for the
+                      public and in national contests) and MARS Radio club (obtained an FCC amateur license in 1951)
+                      were established.</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Fans exiting after first game in the new stadium"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/javelina-stadium-opens.jpg" />
+                      <p class="image-caption">Fans exiting after first game in the new stadium</p>
+                    </div>
+                    <p><span class="month">September 15</span> - Javelina Stadium opens its doors for the first home
+                      football game, with the Javelinas claiming victory over the Texas Lutheran Bulldogs 37-7.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1953</p>
+                    <p><span class="month">Fall</span> - 2108 students enrolled (1266 men and 842 women).</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1954</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="Gil Steinke during football game"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/Gil-Steinke.jpg" />
+                      <p class="image-caption">Gil Steinke during football game</p>
+                    </div>
+                    <p>Gil Steinke, an alumnus and TCAI football player, arrives as Head Coach. A native of Ganado,
+                      Texas, he served five years in the Navy and then played five seasons with the Philadelphia Eagles.
+                      He was the Eagles&#8217; top safety and led them in interceptions and led the NFL in punt returns
+                      in 1947.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1955</p>
+                    <p>Total enrollment 2500.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1956</p>
+                    <p>Lorine Jones Lewis Hall and Robert C. Eckhardt Hall open, providing students with their first
+                      on-campus residences.</p>
+                    <p>The first documented firing of the victory cannon fired in celebration of football score in
+                      Javelina Stadium. It was a rifle mounted on bicycle tires.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1957</p>
+                    <p><span class="month">September 13</span> - The bell was rung for the first time at a pep rally. It
+                      became a tradition for freshmen to ring the Victory Bell for 15 minutes to announce a Javelina
+                      basketball and football win.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1958</p>
+                    <p>Scrappy, a feisty little javelina, was captured near Freer by five A&amp;I students. He attended
+                      the games and would go wild when the cannon was fired.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1959</p>
+                    <p><span class="month">Summer</span> - Erma Rebecca Summers becomes the first black woman to
+                      graduate from A&amp;I with a master&#8217;s in education in 1959. She had previously earned a
+                      bachelor&#8217;s in education from Texas Southern University.</p>
+                    <p>Robert J. Kleberg Agricultural Hall opens.</p>
+                    <p>Married students and family housing opens on campus.</p>
+                    <p>Football record was 10-1, the best college record in Texas.</p>
+                    <p><span class="month">December 19</span> - Javelinas bested the Bears of Lenoir Rhyne (North
+                      Carolina) at the NAIA National Holiday Bowl Classic in St. Petersburg, FL.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1960s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1960s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1960</p>
+                      <p>The Javelina Battle Flag debuts, featuring a caricature of a fierce Javelina donning a beanie
+                        was created by student artist Amado Pena, who entered a sports department contest and won $10
+                        dollars for his efforts. The caricature&#8212;known as Porky&#8212;remains a beloved symbol of
+                        Javelina Pride.</p>
+                      <p>Texas A&amp;I was the first integrated school in the Lone Star Conference to offer a football
+                        scholarship to a black athlete, Sid Blanks, stand-out athlete from Del Rio. He was preceded by
+                        Hank Allen (basketball) and Herman Robinson (track) who were some of the first black athletes in
+                        institutional history.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1962</p>
+                      <p><span class="month">December 20</span> - The Board of Directors completed integration by making
+                        all institutional facilities available to all students.</p>
+                      <p>The Laredo Club is organized by the Mexican-American students (especially those from Laredo) to
+                        combine cultural aspects in relation to academic life and raise money for scholarships. They
+                        sponsored dances, participated in carnivals, and brought in speakers to campus.</p>
+                      <p>James C. Jernigan was named President of Texas A&amp;I University. Under his leaderships, the
+                        University would go on to launch the first bilingual education doctoral program and the
+                        nation&#8217;s first natural gas curriculum accredited by the Engineer&#8217;s Council of
+                        Professional Development. In addition, Jernigan was instrumental in establishing A&amp;I
+                        campuses in Laredo and Corpus Christi that would go on to become Texas A&amp;M International
+                        University and Texas A&amp;M-Corpus Christi.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1967</p>
+                      <p>Texas College of Arts and Industries becomes officially known as Texas A&amp;I University.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Texas A&amp;I Logo"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/TAI_blue.jpg" />
+                        <p class="image-caption">Texas A&amp;I Logo</p>
+                      </div>
+                      <p><span class="month">Fall</span> - 5376 students enrolled.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1968</p>
+                      <p><span class="month">September</span> - James C. Jernigan Library opens.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1969</p>
+                      <p><span class="month">December 2</span> - the Student Council voted to make &#8220;Jalisco&#8221;
+                        an official fight song (see School Songs).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1970s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1970s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1970</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Students broadcasting in KTAI radio station"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/ktai-radio.jpg" />
+                        <p class="image-caption">Students broadcasting in KTAI radio station</p>
+                      </div>
+                      <p>KTAI, the university student-run radio station, officially launches the station&#8217;s first
+                        broadcast.</p>
+                      <p>The Physical Education Center ($1.7 million) was completed.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1971</p>
+                      <p><span class="month">June 5</span> - The Board of Directors declared &#8220;Jalisco&#8221; an
+                        official fight song along with &#8220;Texas A&amp;I Fight Song&#8221;.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Board members gather for A&amp;I incorporation signing"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/foundation-incorporation.jpg" />
+                        <p class="image-caption">Texas A&amp;I board members gather at the secretary of states office
+                          for the signing of the Texas A&amp;I Development Foundation's incorporation</p>
+                      </div>
+                      <p><span class="month">December 20</span> - The Texas A&amp;I Development Foundation was
+                        officially incorporated by the Texas Secretary of State.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1972</p>
+                      <p><span class="month">March 23</span> - The Department of the Army announced ten schools,
+                        including Texas A&amp;I, had been selected to begin offering Army ROTC to women in special
+                        scholarships offered to qualified women and, once they graduated, women would be commissioned as
+                        second lieutenants.</p>
+                      <p><span class="month">October</span> - 15 women participated in ROTC.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1975</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Texas A&amp;I was a pioneer in bilingual education"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/bilingual-education.jpg" />
+                        <p class="image-caption">Texas A&amp;I was a pioneer in bilingual education</p>
+                      </div>
+                      <p>Our university becomes the first institution in the nation to offer a doctoral program in
+                        Bilingual Education.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1976</p>
+                      <p>The John E. Conner Museum, located at Loftin Hall and named in honor of the university&#8217;s
+                        first history professor, has a collection of diverse items.</p>
+                      <p><span class="month">January</span> - The Physical Education Center is named the Gilbert E
+                        Steinke Health and Physical Education Center (SPEC).</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Jesusa Salinas graduating from the ROTC program"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/jesusa-salinas-graduation.jpg" />
+                        <p class="image-caption">Jesusa Salinas graduating from the ROTC program</p>
+                      </div>
+                      <p>Jesusa Salinas of Gregory, TX, was the first woman to graduate from the ROTC program and be
+                        commissioned as a second lieutenant in the US Army.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">1977</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Gil Steinke poses with pet dachshund for retirement photo"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/gil-steinke-retires.jpg" />
+                        <p class="image-caption">Gil Steinke poses with pet dachshund for retirement photo</p>
+                      </div>
+                      <p>Gil Steinke retires after 23 years as head coach. He has a 182-61-4 career coaching record.
+                        During his time, the Javelinas won ten Lone Star Conference championships, played in five
+                        different countries and twenty different states. He was named the NAIA National Coach of the
+                        Year four times, American Football Coaches Association District Coach of the year twice, and was
+                        runner-up in the national AFCA Coach of the Year for two seasons, was Texas Sports Writers
+                        Association Coach of the Year in 1975, Lone Star Conference Coach of the Year for three straight
+                        years, LSC Coach of the Decade of the 1960s and was inducted into the NAIA Hall of Fame in 1971.
+                      </p>
+                      <p>The Javelinas were in a Victory Streak that ran from 1973-77 (42 games without a defeat or
+                        tie), the longest in any college division team, NAIA team, state of Texas, or Lone Star
+                        Conference team.</p>
+                      <p>He had 11 players in the professional ranks. Between 1960-1977, he had 6 players drafted in the
+                        first round, 4 in the second, and 4 in the third round. 41 All Americans and numerous
+                        all-conference and All Texas College players.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1980s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1980s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1981</p>
+                    <p>Through a grant from the Caesar Kleberg Foundation for Wildlife Conservation, The Caesar Kleberg
+                      Wildlife Research Institute is established and will go on to become one of the leading wildlife
+                      research institutes in the nation.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1986</p>
+                    <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                        alt="&quot;Leaders of the Pack&quot; statue"
+                        src="https://www.tamuk.edu/centennial/_images/timeline/leaders-of-the-pack-statue.jpg" />
+                      <p class="image-caption">"Leaders of the Pack" statue</p>
+                    </div>
+                    <p><span class="month">February 14</span> - The &#8220;Leaders of the Pack&#8221; statue, a symbol
+                      of unity and pride, is unveiled as part of the Texas Sesquicentennial event and Connor museum
+                      exhibit. University officials commissioned alumnus Armando Hinojosa to create the now-iconic
+                      statue. The Alumni Association raised more than $70,000 for the effort. University officials,
+                      including alumnus Dr. Eliseo Torres, commissioned alumnus Armando Hinojosa to create the statue.
+                      The Alumni Association raised more than $70,000 for the statue.</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1989</p>
+                    <p><span class="month">September 1</span> - Texas A&amp;I University joins the Texas A&amp;M
+                      University System.</p>
+                    <p>It becomes part of one of the largest systems of higher education in the nation, comprising 11
+                      universities, seven state agencies, and a comprehensive health science center.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="1990s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>1990s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1991</p>
+                    <p>The Doctor of Education Degree (Ed. D.) in the College of Education and Human Performance starts.
+                    </p>
+                    <p>Another cannon makes an appearance and is named by the students &#8220;Black Thunder.&#8221;</p>
+                  </div>
+                </div>
+                <div class="margin-bottom-xlarge">
+                  <div class="timeline_text">
+                    <p class="year">1993</p>
+                    <p><span class="month">September 1</span> - Texas A&amp;I University officially changes its name to
+                      Texas A&amp;M University-Kingsville.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="2000s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>2000s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2000</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img alt="NNTRC Logo"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/nntrcfinal.jpg" />
+                        <p class="image-caption">NNTRC Logo</p>
+                      </div>
+                      <p><span class="month">March 24</span> - The Texas A&amp;M System Board of Regents recognized the
+                        excellent biomedical research and established the Natural Toxins Research Center at Texas
+                        A&amp;M University-Kingsville. The center is now known as the National Natural Toxins Research
+                        Center (NNTRC). It remains the nation&#8217;s only federally-funded viper research center.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2002</p>
+                      <p><span class="month">September 1</span> - The Frank H. Dotterweich College of Engineering
+                        establishes the Ph.D. program in Environmental Engineering.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2008</p>
+                      <p><span class="month">November 1</span> - Officials at Texas A&amp;M University-Kingsville broke
+                        ground on the new residence hall, University Village, Saturday, Nov. 1, at the site near the
+                        intersection of Avenue B and Retama St. Construction was scheduled to begin in November on the
+                        $28.6 million building. Total cost of the building plus furnishings is around $35 million. It is
+                        expected to be complete by August 2009.</p>
+                      <p>Dr. Steven Tallant becomes the 18th President of Texas A&amp;M University-Kingsville.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="2010s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>2010s</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2010</p>
+                      <p><span class="month">July 23</span> - The Texas A&amp;M University System Board of Regents
+                        approved the preliminary planning authority of a bachelor&#8217;s degree in animal-wildlife
+                        veterinary technology for Texas A&amp;M University-Kingsville during their July 23, 2010
+                        meeting.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Mesquite Village West"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/Mesquite-Village-West.jpg" />
+                        <p class="image-caption">Mesquite Village West</p>
+                      </div>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Javelina Dining Hall"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/jdh-2.jpg" />
+                        <p class="image-caption">Dining Area of the Javelina Dining Hall</p>
+                      </div>
+                      <p><span class="month">July 30</span> - A groundbreaking ceremony was held for the new dining hall
+                        and another suite-style residence hall, Mesquite Village. The new dining hall will have the
+                        capacity to feed about 300 students at one time with a second floor that features two conference
+                        rooms. The nearly 19,000 square foot building has a $5.5 million price tag. Construction on the
+                        new 300-bed residence hall was due to begin in the fall 2010 semester. The 98,000 square foot
+                        building was designed to house the new Honors College. It had an $18 million price tag.</p>
+                      <p><span class="month">December 15</span> - The staff at the Texas A&amp;M-Kingsville&#8217;s
+                        Citrus Center moved into the new building after using former army barracks as a work place for
+                        several decades. Officials from the state of Texas, The Texas A&amp;M University System, and
+                        Texas A&amp;M-Kingsville gathered to dedicate the $7.2 million building.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2013</p>
+                      <p>TAMUK responds to the needs of neighboring Premont ISD to avoid the district&#8217;s closure.
+                        The Premont Alliance represented a first-of-its-kind partnership between TAMUK, the district,
+                        the Texas A&amp;M System, and the Texas Education Agency that resulted in an unprecedented
+                        turn-around in the district.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2014</p>
+                      <p><span class="month">December</span> - The first five veterinary technology students completed
+                        their first semester of the program. Additionally, the first veterinary technology building was
+                        completed on university property on Sage Road.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2015</p>
+                      <p><span class="month">September 6</span> - The statue of Football Coach Gil Steinke was installed
+                        at Javelina Stadium.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2017</p>
+                      <p><span class="month">April 28</span> - The Texas A&amp;M University System Board of Regents
+                        approved construction on the new $60 million Texas A&amp;M University-Kingsville Music Education
+                        Complex. Work was set to begin in June 2017.</p>
+                      <p><span class="month">November 9</span> - The College of Business Administration at Texas A&amp;M
+                        University-Kingsville was accepted for accreditation by the Association to Advance Collegiate
+                        Schools of Business (AACSB), placing the business college among the top five percent of all
+                        business schools worldwide.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2018</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="2018 Beach Volleyball National Champions"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/beach-national-champs.jpg" />
+                        <p class="image-caption">2018 Beach Volleyball National Champions</p>
+                      </div>
+                      <p><span class="month">May</span> - The beach volleyball team at Javelina Nation became the first
+                        women&#8217;s team in Javelina athletics history to win a national championship.</p>
+                      <p><span class="month">July</span> - Kleberg Bank donated funds to develop a Bloomberg Financial
+                        Lab in the College of Business Administration.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2019</p>
+                      <p><span class="month">January</span> - Dr. Mark Hussey becomes the 20th President of Texas
+                        A&amp;M-Kingsville. He&#8217;d previously served as interim President of Texas A&amp;M.</p>
+                      <p><span class="month">February</span> - TAMUK becomes a Carnegie-recognized level two doctoral
+                        granting research institution.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="timeline_item" id="2020s">
+              <div class="timeline_left">
+                <div class="timeline_date-text">
+                  <h2>2020</h2>
+                </div>
+              </div>
+              <div class="timeline_centre">
+                <div class="timeline_circle"></div>
+              </div>
+              <div class="timeline_right">
+                <div class="margin-bottom-xlarge">
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2020</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Music Education Building"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/music-education-complex.jpg" />
+                        <p class="image-caption">Music Education Building</p>
+                      </div>
+                      <p><span class="month">January</span> - The newly constructed Music Education Building opens
+                        featuring a nearly 500-seat performance hall, 100-seat recital hall, and state-of-the-art
+                        recording studio.</p>
+                      <p><span class="month">January 27</span> - The music department earned the designation School of
+                        Music after a two-year process.</p>
+                      <p><span class="month">March</span> - TAMUK joins institutions across the country in responding to
+                        the COVID-19 pandemic by pivoting to virtual modality and welcomes students back to campus in
+                        Fall 2020.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2022</p>
+                      <p><span class="month">January</span> - Dr. James Hallmark, Vice Chancellor for Academic Affairs
+                        at Texas A&amp;M University System becomes the 21st President of Texas A&amp;M-Kingsville when
+                        he takes on the role on an interim basis.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Dr. Robert Vela Jr. during his Presidential Inauguration"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/dr-robert-vela-jr.jpg" />
+                        <p class="image-caption">Dr. Robert Vela Jr. during his Presidential Inauguration</p>
+                      </div>
+                      <p><span class="month">June</span> - Dr. Robert Vela, a native of Alice, TX and three-time
+                        Javelina alumni, becomes the 22nd President of Texas A&amp;M-Kingsville. He&#8217;d previously
+                        led San Antonio College&#8212;one of the largest community colleges in the nation&#8212;to
+                        winning an Aspen Prize, recognizing the institution as the top community college in the nation.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2023</p>
+                      <p><span class="month">Summer</span> - The University reaches a fund-raising record of $32M.</p>
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <div class="timeline_text">
+                      <p class="year">2024</p>
+                      <p>Research expenditures reach a record of $31M for the first time in University history.</p>
+                      <div class="image-wrapper timeline_image-wrapper margin-bottom-medium"><img
+                          alt="Groundbreaking for the Ocelot Facility"
+                          src="https://www.tamuk.edu/centennial/_images/timeline/OCELOT-GROUNDBREAKING.jpg" />
+                        <p class="image-caption">Groundbreaking for the Ocelot Facility</p>
+                      </div>
+                      <p><span class="month">October 9</span> - Ground was broken for the $20 million Ocelot
+                        Conservation Facility at the Tio and Janell Kleberg Wildlife Research Park.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="overlay-fade-top"></div>
+            <div class="overlay-fade-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>// <![CDATA[
+    function toggleDropdown() {
+      var ul = document.getElementById("nav-links");
+      var caret = document.getElementById("caret");
+
+      // Toggle the visibility of the navigation menu
+      ul.classList.toggle("show");
+      caret.classList.toggle("open");
+    }
+
+    // Handle nav link clicks to collapse the nav
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        var ul = document.getElementById("nav-links");
+        var caret = document.getElementById("caret");
+
+        // Collapse the navigation menu
+        ul.classList.remove("show");
+        caret.classList.remove("open");
+      });
+    });
+
+    const sections = document.querySelectorAll("section[id]");
+
+    function activateNavLink() {
+      let scrollY = window.scrollY;
+
+      sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document
+            .querySelector(`nav ul li a[href*='#${sectionId}']`)
+            .classList.add("active");
+        } else {
+          document
+            .querySelector(`nav ul li a[href*='#${sectionId}']`)
+            .classList.remove("active");
+        }
+      });
+    }
+
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add("show");
+        backToTopButton.classList.remove("hide");
+      } else {
+        backToTopButton.classList.add("hide");
+        setTimeout(() => backToTopButton.classList.remove("show"), 300);
+      }
+    });
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    let ticking = false;
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        this.window.requestAnimationFrame(function () {
+          activateNavLink();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".timeline_image-wrapper");
+      const images = document.querySelectorAll("img");
+
+      images.forEach((image) => {
+        image.classList.add("lightbox-trigger");
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const closeBtn = document.querySelector(".lightbox-close");
+
+      let startY = 0,
+        endY = 0;
+
+      document.querySelectorAll(".lightbox-trigger").forEach((img) => {
+        img.addEventListener("click", function () {
+          lightbox.style.display = "flex";
+          lightboxImg.src = this.src;
+          lightboxCaption.textContent = this.alt || "No caption available";
+          document.body.classList.add("no-scroll");
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }
+
+      lightbox.addEventListener("click", closeLightbox);
+      closeBtn.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("touchstart", (e) => {
+        startY = e.touches[0].clientY;
+      });
+
+      lightbox.addEventListener("touchend", (e) => {
+        endY = e.changedTouches[0].clientY;
+        if (endY - startY > 50) {
+          closeLightbox();
+        }
+      });
+    });
+    // ]]></script>
+
+  <style>
+    footer {
+      position: relative;
+      background: #003399;
+      z-index: 9999;
+      border-top: 1px solid #ffffff55;
+    }
+
+    footer #footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media screen and (max-width:576px) {
+      footer .col-md-2 {
+        margin: 10px;
+      }
+
+    }
+
+    footer * {
+      color: white;
+    }
+
+    footer a i:hover,
+    footer a:hover {
+      color: #f4bf4f
+    }
+
+    footer i {
+      padding: 5px
+    }
+
+    footer hr {
+      background-color: #ffffff55
+    }
+
+    footer img {
+      max-width: 150px;
+      padding-bottom: 10px;
+    }
+  </style>
+
+  <footer class="text-center pt-2" style="background-color: #003399">
+    <div class="container">
+      <section>
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="https://www.javelinagiving.org/give-online">DONATE</a></p>
+          </div>
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="https://www.bkstr.com/texasamkingsvillestore/home">SHOP</a></p>
+          </div>
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="index.html#cal-buttonCon">EVENTS</a></p>
+          </div>
+        </div>
+      </section>
+      <hr class="my-5" />
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <div id="footer-logo"><img alt="centennial logo"
+                src="https://www.tamuk.edu/centennial/_images/Centennial-logo.svg">
+              <p>A 100-Year Legacy - A Future of Possibilities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="align-items-center d-flex justify-content-center mb-4"><a title="Facebook" class="text-white me-4"
+          style="font-size:1.5rem" href="https://www.facebook.com/javelinas/" rel="noopener"
+          aria-label="link to facebook page"><i class="fab fa-facebook-f"></i></a><a title="Youtube"
+          class="text-white me-4" style="font-size:1.5rem" href="http://www.youtube.com/user/TAMUKJavelinaPride"
+          rel="noopener" aria-label="link youtube channel"><i class="fab fa-youtube"></i></a><a title="Instagram"
+          class="text-white me-4" style="font-size:1.5rem" href="https://www.instagram.com/javelinanation/?hl=en"
+          rel="noopener" aria-label="link to Instagram page"><i class="fab fa-instagram"></i></a><a title="Linkedin"
+          class="text-white me-4" style="font-size:1.5rem" href="https://www.linkedin.com/school/javelinanation/"
+          rel="noopener" aria-label="link to Linkedin page"><i class="fab fa-linkedin"></i></a></section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2025 Copyright:
+      <a href="https://www.tamuk.edu/">tamuk.edu</a>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    $('.carousel').carousel({
+      interval: 7500
+    })
+  </script>
+
+</body>
+
+</html>

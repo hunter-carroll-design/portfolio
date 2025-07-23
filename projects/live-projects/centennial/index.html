@@ -1,1 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="../_images_sitewide/decorative/favicon.ico" rel="icon" />
+  <title>
+    Centennial | Texas A&amp;M University Kingsville
+  </title>
+
+
+  <link href="../_misc_assets/fonts/Avenir-Next-Condensed.ttc" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" rel="stylesheet" />
+  <link href="assets/styles.css" rel="stylesheet" />
+  <link href="assets/footer.css" rel="stylesheet" />
+
+
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MTK44QM');</script>
+
+</head>
+
+<body>
+  <noscript>
+    <iframe aria-hidden="true" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MTK44QM"
+      style="display:none;visibility:hidden" title="Google Tag Manager noscript iframe" width="0"></iframe>
+  </noscript>
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <style>
+    #main-nav-container .centennial-logo {
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #main-nav-container .tamuk-logo {
+      /* width: 50px; */
+      width: auto;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #main-nav-container {
+      position: relative;
+      width: 100%;
+      background-color: #003399;
+      border-bottom: 1px solid #ffffff55;
+      z-index: 1
+    }
+
+    #main-nav-container nav {
+      max-width: 1790px;
+      margin: 0 auto;
+    }
+
+    #main-nav-container nav .navbar-brand {
+      /* font-weight: 200; */
+      color: white;
+    }
+
+    #main-nav-container nav .navbar-brand:hover {
+      color: #f4bf4f
+    }
+
+    #main-nav-container .nav-link {
+      color: white
+    }
+
+    #main-nav-container .nav-link:hover,
+    #main-nav-container .active {
+      color: #f4bf4f;
+      text-decoration: underline;
+    }
+  </style>
+  <div id="main-nav-container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- <a class="nav-text navbar-brand" href="https://www.tamuk.edu/centennial" title="Return to Centennial Homepage">
+                <img alt="" class="centennial-logo" src="images/Centennial-logo.svg"/>
+                <span>A 100-Year Legacy</span>
+            </a> -->
+      <a class="nav-text navbar-brand" href="https://www.tamuk.edu" title="Return to TAMUK Homepage">
+        <img alt="" class="tamuk-logo" src="https://www.tamuk.edu/_images_sitewide/web_header1.png" />
+      </a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler collapsed" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.javelinagiving.org/give-online">Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.bkstr.com/texasamkingsvillestore/home">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-link="cal-buttonCon" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="past-presidents.html">Past Presidents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timeline.html">Historical Timeline</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const currentUrl = window.location.href.split("/").pop(); // Get the last part of the current URL
+
+      navLinks.forEach(link => {
+        const linkUrl = link.getAttribute("href").split("/").pop(); // Get the last part of the link URL
+
+        if (currentUrl === linkUrl) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page"); // Accessibility feature
+          link.style.pointerEvents = "none"; // Disable clicking on the active link
+
+          // Check if (current) span already exists; if not, add it
+          if (!link.querySelector(".sr-only")) {
+            const currentSpan = document.createElement("span");
+            currentSpan.classList.add("sr-only");
+            currentSpan.textContent = "(current)";
+            link.appendChild(currentSpan);
+          }
+        } else {
+          link.classList.remove("active");
+          link.removeAttribute("aria-current"); // Remove ARIA label
+          link.style.pointerEvents = "auto"; // Re-enable clicking on non-active links
+
+          // Remove (current) span if it exists
+          const currentSpan = link.querySelector(".sr-only");
+          if (currentSpan) {
+            currentSpan.remove();
+          }
+        }
+      });
+
+      const homepageAnchorLinks = document.querySelectorAll('a[data-link]');
+      const isHomePage = window.location.pathname.includes("index.html") || window.location.pathname === "/";
+
+      homepageAnchorLinks.forEach(link => {
+        const section = link.getAttribute("data-link");
+
+        if (isHomePage) {
+          link.href = `#${section}`;
+        } else {
+          link.href = `https://www.tamuk.edu/centennial/index.html#${section}`;
+        }
+      });
+
+    });
+
+
+  </script>
+
+
+  <main>
+    <section id="intro-wrapper">
+      <div id="intro">
+        <div id="hero-background">
+          <div id="hero-wrap">
+            <div id="hero-img-div"><img alt="cornerstone" height="354" src="images/banner.jpg" width="832" />
+              <div class="overlay w-100 h-100"></div>
+            </div>
+            <div id="diagonal">
+              <div id="inner-diagonal"></div>
+            </div>
+          </div>
+          <div id="intro-section">
+            <!-- <div id="angle-background"><img src="images/angle-background.svg" /></div> -->
+            <div id="grid-div">
+              <div class="row mb-3" style="align-items: center;">
+                <div class="col col-12 col-lg-6" id="img-grid-col">
+                  <div class="row" id="img-grid">
+                    <div class="col col-4 p-0"><img alt=""
+                        src="images/intro-image1.jpg" /></div>
+                    <div class="col col-4 p-0"><img alt=""
+                        src="images/intro-image2.jpg" /></div>
+                    <div class="col col-4 p-0"><img alt=""
+                        src="images/intro-image3.jpg" /></div>
+                  </div>
+                </div>
+                <div class="col col-12 col-xl-5 col-lg-6 grid-text pt-5 p-3 py-4 pr-md-5">
+                  <div class="my-auto pt-4 px-4 ">
+                    <h1 class="h2 text-mont mb-3">A 100-Year Legacy <br /> A Future of Possibilities</h1>
+                    <p>Texas A&amp;M-Kingsville is celebrating 100 years of education, discovery, and service in South
+                      Texas. Over the last century, we have awarded tens of thousands of degrees, preparing generations
+                      of graduates to build their own legacies of success and prosperity. Our proud history as South
+                      Texas State Teachers College, Texas College of Arts and Industries, and Texas A&amp;I University
+                      means Texas A&amp;M-Kingsville is prepared to continue shaping the future led by our timeless core
+                      values&#8212;care, integrity, pride, innovation, and excellence.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="logo-text-div"><img alt="centennial logo"
+            src="images/TAMUK-Centennial-Logo.png" style="max-width: 325px;" /> <!--<div id="cent-logo"><img src="images/TAMUK-Centennial-Logo.png" /></div><div id="intro-text"><h1 class="h2">A 100-Year Legacy 
+                        <br /> A Future of Possibilities
+                    </h1></div></div>--></div>
+      </div>
+    </section>
+    <section id="quote-wrapper">
+      <div class="quote-background" id="quote-container">
+        <div class="row justify-content-between align-between" id="quote">
+          <div class="col col-10 col-lg-5 col-xl-4 mb-auto mt-2 p-4 p-md-5" id="text-div">
+            <!--<p class="lead">A South Texas pioneer in higher education and an original Hispanic-serving institution, Texas A&amp;M University-Kingsville transforms lives and creates well-rounded leaders through discovery, creativity, and innovation. Proudly committed to student success, the University offers high quality, student-centered undergraduate, graduate, and doctoral education. Our students positively impact their communities, both locally and globally, with courage and integrity. We are Javelina Nation!</p>-->
+            <img id="pres-img" src="images/Robert-Vela.jpg" />
+            <div class="lead" id="pres-sign-box">Dr. Robert H. Vela Jr. <br /> President</div>
+          </div>
+          <div class="col col-10 col-lg-4 mt-auto p-5 mr-md-5" id="quote-div">
+            <div class="row"><i class=" col-1 fas fa-quote-left fa-lg m-0 p-0 align-self-start text-center"></i>
+              <div class="col-10 m-0 py-1 lead" id="quote-text" style="word-break: break-word;">A century ago, we were
+                among the very first institutions to believe in the promise of South Texas. Since then we have doubled
+                down on our backyard, opening wide the doors to opportunity and success for generations. We remain
+                laser-focused on expanding those possibilities for the students of South Texas and beyond.</div>
+              <i class="col-1 fas fa-quote-right fa-lg m-0 p-0 align-self-end text-center"></i>
+            </div>
+            <div class="col-12 text-right mt-2" style="word-break: break-word;">
+              <p class="m-0">- Dr. Robert Vela</p>
+            </div>
+          </div>
+          <!-- <div id="quote-background"><img class="" id="quote-background-img" src="/centennial/_images/quote-background.png"></div> -->
+        </div>
+      </div>
+    </section>
+    <section class="row w-100 mx-auto" id="president-timeline">
+      <div class="col-12 " id="president"><!-- <img src="http://127.0.0.1:5500/centennial/_images/intro-image2.png">-->
+        <!-- <h3>Past Presidents</h3> -->
+        <!--<button type="button" class="cent-button my-2">Past Presidents</button> -->
+        <div class="" id="cornerstone" style="color: #091149;">
+          <div class="row  no-gutters py-4">
+            <div class="col-12 col-md-3"><img alt="2025 Cornerstone Recreation" class=" img-fluid"
+                src="images/cornerstone-recreation.jpg" /></div>
+            <div class="col-md-4 col-12 corner-text d-flex align-self-center justify-content-center flex-column">
+              <h2><strong>Corner Stone Recreation</strong></h2>
+              <p class="lead">On April 3, we recreated the 1925 Corner Stone Dedication.</p>
+              <a class="mx-auto"
+                href="https://photos.tamuk.edu/Events/Centennial/Spring-2025-Recreation-of-Cornerstone-Photo"
+                style="width: max-content;"> <button class="cent-button" type="button">Corner Stone Gallery</button>
+              </a>
+            </div>
+            <div class="col-md-3 col-12"><img alt="1925 Cornerstone" class=" img-fluid"
+                src="images/cornerstone.jpg" /></div>
+          </div>
+        </div>
+        <div class="row container-fluid mx-auto no-gutters p-0">
+          <div class="col-12 col-md-7 align-self-center">
+            <div class="row      align-self-center">
+              <div
+                class="col-12 text-center  legacy-section container d-flex justify-content-center  middle-align py-4">
+                <div class="" style="height: unset;">
+                  <h3><strong>A 100-Year Legacy</strong></h3>
+                  <br />
+                  <p>Journey through our century-long history</p>
+                </div>
+              </div>
+              <div class="col-12 button-section py-2 d-flex align-self-center justify-content-center "><a
+                  href="https://www.tamuk.edu/centennial/past-presidents.html" target="_parent"> <button
+                    class="cent-button-2 my-2 mx-2" type="button">Past Presidents</button> </a> <br /> <a
+                  href="https://www.tamuk.edu/centennial/timeline.html" target="_parent"> <button
+                    class="cent-button-2 my-2 mx-2" type="button">Historical Timeline</button> </a> <!--<br />-->
+                <!--<a href="/render/file.act?path=/centennial" target="_parent">-->
+                <!--    <button class="cent-button-2 my-2 mx-2" type="button">Centennial Playlist</button>-->
+                <!--</a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-5 embed-responsive embed-responsive-16by9     " id=""><iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen="allowfullscreen" frameborder="0" height="150"
+              referrerpolicy="strict-origin-when-cross-origin"
+              src="https://www.youtube.com/embed/Qz8J_W21Gf4?si=Wl3S2dBhj2lXjIct" title="YouTube video player"
+              width="300"></iframe></div>
+        </div>
+        <!--   <div class="row container-fluid mx-auto"><div class="col-12 col-md-6 text-center  legacy-section container d-flex justify-content-center  middle-align py-4"><div class=""><h3><strong>A 100-Year Legacy</strong></h3><br /><p>Journey through our century-long history</p></div></div><div class="col-12 col-md-6 button-section py-2 d-flex align-self-center justify-content-center "><a href="/centennial/past-presidents"><button class="cent-button-2 my-2 mx-2" type="button">Past Presidents</button></a><br /><a href="/centennial/timeline"><button class="cent-button-2 my-2 mx-2" type="button">Historical Timeline</button></a></div></div></div>--> <!-- <div id="store" class="col-12  text-center"><div class="row mx-auto"><div class="col-12 col-md-5 d-flex justify-content-center"><h3> Official Centennial Merch</h3></div><div class="col-12 col-md-5 button-section d-flex justify-content-center"><button type="button" class="cent-button"
+              href="https://www.bkstr.com/texasamkingsvillestore/shop/specialty-shops/centennial-shop">Centennial
+              Shop</button></div></div></div> -->
+      </div>
+    </section>
+    <section class="calendar pb-5" id="cal-buttonCon">
+      <h2>Celebrating our Centennial</h2>
+      <a href="https://calendar.tamuk.edu/search/events?search=centennial"> <button class="cent-button"
+          type="button">view calendar</button> </a>
+    </section>
+    <section id="events-future">
+      <div class="mx-4 mx-md-auto" id="events">
+        <!-- <div class="owl-carousel owl-theme container pt-5 pb-2" id="centennial-events"></div> -->
+        <div class="container" id="events-section">
+          <ul class="control" id="event-control">
+            <li class="prev"><!-- <i aria-hidden="true" class="eicon-chevron-left">test</i> --></li>
+            <li class="next">&#160;</li>
+          </ul>
+          <div id="centennial-events"></div>
+        </div>
+      </div>
+      <div id="store">
+        <div class="row  no-gutters">
+          <div class="col col-12 col-md-5" id="store-img">
+            <div class="carousel slide carousel-fade" data-ride="carousel" id="carouselIndicators">
+              <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#carouselIndicators">&#160;</li>
+                <li data-slide-to="1" data-target="#carouselIndicators">&#160;</li>
+                <li data-slide-to="2" data-target="#carouselIndicators">&#160;</li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img alt="First slide" class="d-block w-100"
+                    src="images/merch-1.jpg" /></div>
+                <div class="carousel-item"><img alt="Second slide" class="d-block w-100"
+                    src="images/merch-2.jpg" /></div>
+                <div class="carousel-item"><img alt="Third slide" class="d-block w-100"
+                    src="images/merch-3.jpg" /></div>
+              </div>
+              <a class="carousel-control-prev" data-slide="prev" href="#carouselIndicators" role="button"> <span
+                  aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span>
+              </a> <a class="carousel-control-next" data-slide="next" href="#carouselIndicators" role="button"> <span
+                  aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span> </a>
+            </div>
+          </div>
+          <div class="col col-12 col-md-7 text-center align-self-center" id="store-text">
+            <div class="my-5">
+              <h2><strong>Official Centennial Merch</strong></h2>
+              <a href="https://www.bkstr.com/texasamkingsvillestore/shop/specialty-shops/centennial-shop"> <button
+                  class="cent-button" type="button">Centennial Shop</button> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+        <div class="" id="stories"><div class="row mx-5 mb-2"><div class="col-12 col-md-4"><div id="stories-header"><h2><strong>Stories of the century</strong></h2></div></div><div class="col-8 d-md-block d-none"><div class=" ml-1 " id="centennial-stories"></div></div><div class="col-12 d-block d-md-none"><div id="centennial-stories-mobile"></div></div></div></div>
+        -->
+      <div id="strategic-plan">
+        <div class="row no-gutters" id="strategic-text">
+          <div class="col col-12 col-md-7 text-center align-self-center order-2 order-md-1">
+            <div class="my-5">
+              <h2><strong>The next 100 years</strong></h2>
+              <p>Our plan for Javelina Nation</p>
+              <a href="../strategicplan/index.html"> <button class="cent-button" type="button">Strategic Plan</button>
+              </a>
+            </div>
+          </div>
+          <div class="col col-12 col-md-5 order-1 order-md-2" id="strategic-img"><img class="img-fluid"
+              src="images/page-end.jpg" /></div>
+        </div>
+      </div>
+    </section>
+    <script>// <![CDATA[
+      var url = "https://calendar.tamuk.edu/api/2/events/search?search=centennial&pp=15&days=365";
+
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+
+
+
+          var localistEventsWrapper = document.querySelector("#centennial-events");
+
+          function parseData(data) {
+            // ** Only keep one instance of recurring events */
+            var filteredRecurringEvents = data.events
+
+            for (var i in filteredRecurringEvents) {
+              var groups = filteredRecurringEvents[i].event.groups;
+              var departments = filteredRecurringEvents[i].event.departments;
+              var eventTypes = filteredRecurringEvents[i].event.filters.event_types;
+              var title = filteredRecurringEvents[i].event.title
+
+              if (departments !== undefined && departments[0].name === "Office Of Research And Graduate Studies") {
+                delete filteredRecurringEvents[i]
+              } else if (departments !== undefined && departments[0].name === "Office Of The Registrar") {
+                delete filteredRecurringEvents[i]
+              } else if (title === "Student & Family Tours") {
+                delete filteredRecurringEvents[i]
+              }
+            }
+
+            for (var i in filteredRecurringEvents) {
+              var _filteredRecurringEve = filteredRecurringEvents[i].event,
+                experience = _filteredRecurringEve.experience,
+                event_instances = _filteredRecurringEve.event_instances,
+                id = _filteredRecurringEve.id,
+                title = _filteredRecurringEve.title.replaceAll("\"", "\'"),
+                last_date = _filteredRecurringEve.last_date,
+                photo_url = _filteredRecurringEve.photo_url,
+                caption = _filteredRecurringEve.caption,
+                localist_url = _filteredRecurringEve.localist_url,
+                description_text = _filteredRecurringEve.description_text.replaceAll("\"", "\'"),
+                description = _filteredRecurringEve.description,
+                facebook_id = _filteredRecurringEve.facebook_id,
+                status = _filteredRecurringEve.status;
+
+              if (status !== "live") {
+                var status_of_event = '<div class="position-absolute text-center py-1 px-2" style="background-color:#cc6666;color:#fff;font-weight:bold;bottom:0;right:0">' + status.charAt(0).toUpperCase() + status.slice(1) + '</div>'
+              } else {
+                var status_of_event = ''
+              }
+
+              if (experience == "inperson") {
+                experience = "in-person"
+              }
+
+              var _event_instances$0$ev = event_instances[0].event_instance,
+                start = _event_instances$0$ev.start,
+                end = _event_instances$0$ev.end,
+                event_id = _event_instances$0$ev.event_id;
+
+              var monthNames = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+              ];
+              var startD = new Date(start);
+              var endD = new Date(end);
+              var hoursS =
+                startD.getHours() > 12 ? startD.getHours() - 12 : startD.getHours();
+              var hoursE =
+                endD.getHours() > 12 ? endD.getHours() - 12 : endD.getHours();
+              var minutesS =
+                startD.getMinutes() < 10
+                  ? "0" + startD.getMinutes()
+                  : startD.getMinutes();
+              var minutesE =
+                endD.getMinutes() < 10 ? "0" + endD.getMinutes() : endD.getMinutes();
+              var am_pmS = startD.getHours() >= 12 ? "PM" : "AM";
+              var am_pmE = endD.getHours() >= 12 ? "PM" : "AM";
+              var timeS = hoursS + ":" + minutesS + am_pmS;
+              var timeE = hoursE + ":" + minutesE + am_pmE;
+              var fullTime = "".concat(timeS, " - ").concat(timeE);
+              var month = monthNames[startD.getMonth()];
+              var monthNumber = startD.getMonth() + 1;
+
+              var day = startD.getDate().toString();
+              var showTime = end !== null ? fullTime : start !== null ? timeS : false
+              if (showTime == "0:00AM") {
+                showTime = "<br/>"
+              }
+              localistEventsWrapper.insertAdjacentHTML("beforeend",
+                `
+                    <div class="events item "><div class="event photo event-photo-div id="${id}""><img class="img-fluid event-photo" src="${photo_url}" /></div><div class="event-info"><div class="event event-title"><strong>${title}</strong></div><div class="event description-text">${description_text}</div></div><div class="date-angle"><img class="img-fluid" src="images/date-angle.svg" /><div class="date-div"><p class="date h4">${monthNumber}.${day}</p></div></div><a class="stretched-link" href="${localist_url}"></a></div>
+                `
+              );
+
+            }
+            var slider = tns({
+              container: "#centennial-events",
+              controlsPosition: "bottom",
+              nav: false,
+              navPosition: "bottom",
+              navAsThumbnails: true,
+              mouseDrag: true,
+              loop: false,
+              preventScrollOnTouch: 'auto',
+              controlsContainer: "#event-control",
+              responsive: {
+                0: {
+                  items: 1,
+                },
+                576: {
+                  items: 2,
+                },
+                1000: {
+                  items: 3,
+                },
+                1200: {
+                  items: 4,
+                },
+              },
+            })
+          }
+          parseData(data)
+        })
+      // ]]></script>
+  </main>
+
+  <style>
+    footer {
+      position: relative;
+      background: #003399;
+      z-index: 9999;
+      border-top: 1px solid #ffffff55;
+    }
+
+    footer #footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media screen and (max-width:576px) {
+      footer .col-md-2 {
+        margin: 10px;
+      }
+
+    }
+
+    footer * {
+      color: white;
+    }
+
+    footer a i:hover,
+    footer a:hover {
+      color: #f4bf4f
+    }
+
+    footer i {
+      padding: 5px
+    }
+
+    footer hr {
+      background-color: #ffffff55
+    }
+
+    footer img {
+      max-width: 150px;
+      padding-bottom: 10px;
+    }
+  </style>
+
+  <footer class="text-center pt-2" style="background-color: #003399">
+    <div class="container">
+      <section>
+        <div class="row text-center d-flex justify-content-center pt-5">
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="https://www.javelinagiving.org/give-online">DONATE</a></p>
+          </div>
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="https://www.bkstr.com/texasamkingsvillestore/home">SHOP</a></p>
+          </div>
+          <div class="col-md-2">
+            <p class="h6 font-weight-bold"><a href="index.html#cal-buttonCon">EVENTS</a></p>
+          </div>
+        </div>
+      </section>
+      <hr class="my-5" />
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <div id="footer-logo"><img alt="centennial logo"
+                src="images/TAMUK-Centennial-Logo.png">
+              <p>A 100-Year Legacy - A Future of Possibilities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="align-items-center d-flex justify-content-center mb-4"><a title="Facebook" class="text-white me-4"
+          style="font-size:1.5rem" href="https://www.facebook.com/javelinas/" rel="noopener"
+          aria-label="link to facebook page"><i class="fab fa-facebook-f"></i></a><a title="Youtube"
+          class="text-white me-4" style="font-size:1.5rem" href="http://www.youtube.com/user/TAMUKJavelinaPride"
+          rel="noopener" aria-label="link youtube channel"><i class="fab fa-youtube"></i></a><a title="Instagram"
+          class="text-white me-4" style="font-size:1.5rem" href="https://www.instagram.com/javelinanation/?hl=en"
+          rel="noopener" aria-label="link to Instagram page"><i class="fab fa-instagram"></i></a><a title="Linkedin"
+          class="text-white me-4" style="font-size:1.5rem" href="https://www.linkedin.com/school/javelinanation/"
+          rel="noopener" aria-label="link to Linkedin page"><i class="fab fa-linkedin"></i></a></section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2025 Copyright:
+      <a href="https://www.tamuk.edu/">tamuk.edu</a>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    $('.carousel').carousel({
+      interval: 7500
+    })
+  </script>
+
+</body>
+
+</html>
